@@ -34,8 +34,15 @@ namespace Criar_html
             //C:\\Users\\Cdsr99\\Google Drive\\Programas\\HTML\\Practice\\" + name\\name.html
             StreamWriter conteudo = new StreamWriter(caminho);
             //StreamReader conteudo02 = new StreamReader();
-            conteudo.WriteLine("Test");
-            conteudo.Write("test02");
+            conteudo.WriteLine("<!DOCTYPE html>");
+            conteudo.WriteLine("<html>");
+            conteudo.WriteLine("<head>");
+            conteudo.WriteLine("	<title>Cdsr99</title>");
+            conteudo.WriteLine("</head>");
+            conteudo.WriteLine("<body>");
+            conteudo.WriteLine("");
+            conteudo.WriteLine("</body>");
+            conteudo.WriteLine("</html>");
             conteudo.Close();
             
         }
