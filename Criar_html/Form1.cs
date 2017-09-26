@@ -43,6 +43,7 @@ namespace Criar_html
         private void button1_Click(object sender, EventArgs e)
         {
             diretorio();
+            System.Threading.Thread.Sleep(5000);
             html();
         }
        public void diretorio()
@@ -66,6 +67,10 @@ namespace Criar_html
             
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //diretorio();
+        }
     }
     }
 
