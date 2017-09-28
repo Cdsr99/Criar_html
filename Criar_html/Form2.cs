@@ -12,26 +12,44 @@ using System.Windows.Forms;
 
 namespace Criar_html
 {
-    public partial class Form1 : Form
+    public partial class Form2 : Form
     {
-        
-
-        public Form1()
+        public Form2()
         {
             InitializeComponent();
-            
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void Form2_Load(object sender, EventArgs e)
         {
+            
+        }
+        public void caminho()
+        {
+            String caminho_bat;
+            String caminho_arq;
+            String texto;
+
+            caminho_bat = @"C:\Windows\Temp\Criador_pasta02.bat";
+
+            StreamWriter bat = new StreamWriter(caminho_bat);
+            bat.WriteLine("c:");
+            bat.WriteLine("cd " + textBox1.Text);
+            bat.WriteLine("md " + textBox2.Text);
+            //bat.WriteLine("pause");
+            bat.Close();
+
+            Process chamar = new Process();
+            chamar.StartInfo.FileName = caminho_bat;
+            chamar.Start();
+
             
         }
         public void html()
         {
-            String ds = textBox1.Text;
+            String nome = textBox2.Text;
             String name;
             name = textBox1.Text;
-            string caminho = "C:\\Users\\Cdsr99\\Google Drive\\Programas\\HTML\\Practice\\" + ds + "\\" + name + ".html";
+            string caminho = textBox1.Text + "\\" + nome + "\\" + nome + ".html" ;
             //C:\\Users\\Cdsr99\\Google Drive\\Programas\\HTML\\Practice\\" + name\\name.html
             StreamWriter conteudo = new StreamWriter(caminho);
             //StreamReader conteudo02 = new StreamReader();
@@ -45,47 +63,14 @@ namespace Criar_html
             conteudo.WriteLine("</body>");
             conteudo.WriteLine("</html>");
             conteudo.Close();
-            
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            diretorio();
+            caminho();
             System.Threading.Thread.Sleep(5000);
             html();
         }
-       public void diretorio()
-        {
-
-            String name;
-            name = textBox1.Text;
-            String caminho = @"C:\Windows\Temp\Criador_pasta02.bat";
-
-
-            StreamWriter pasta = new StreamWriter(caminho);
-            pasta.WriteLine("c:");
-            pasta.WriteLine(@"cd C:\Users\Cdsr99\Google Drive\Programas\HTML\Practice");
-            pasta.WriteLine("md " + name);
-            //pasta.WriteLine("pause");
-            pasta.Close();
-
-            Process chamar = new Process();
-            chamar.StartInfo.FileName = caminho;
-            chamar.Start();
-            
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //diretorio();
-        }
-
-        private void alterarCaminhoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Form2 form = new Form2();
-            form.Show();
-            
-        }
     }
-    }
-
+}

@@ -7,3 +7,4 @@ D:\Programas\C#\Criar_html\Criar_html\obj\Debug\Criar_html.Properties.Resources.
 D:\Programas\C#\Criar_html\Criar_html\obj\Debug\Criar_html.csproj.GenerateResource.Cache
 D:\Programas\C#\Criar_html\Criar_html\obj\Debug\Criar_html.exe
 D:\Programas\C#\Criar_html\Criar_html\obj\Debug\Criar_html.pdb
+D:\Programas\C#\Criar_html\Criar_html\obj\Debug\Criar_html.Form2.resources

@@ -73,6 +73,7 @@
             this.alterarCaminhoToolStripMenuItem.Name = "alterarCaminhoToolStripMenuItem";
             this.alterarCaminhoToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
             this.alterarCaminhoToolStripMenuItem.Text = "Alterar Caminho ";
+            this.alterarCaminhoToolStripMenuItem.Click += new System.EventHandler(this.alterarCaminhoToolStripMenuItem_Click);
             // 
             // sobreToolStripMenuItem
             // 
